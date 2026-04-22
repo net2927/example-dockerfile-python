@@ -1,7 +1,6 @@
 FROM alpine:3.23
-
-RUN apk add python
-ADD . /app
+RUN apk add --no-cache python3
+COPY . /app
 WORKDIR /app
-CMD python -m SimpleHTTPServer 5000
 EXPOSE 5000
+CMD ["python3", "-m", "http.server", "5000"]
