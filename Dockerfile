@@ -1,6 +1,6 @@
 FROM alpine:3.23
 
-RUN apk install python
+RUN apk add python
 ADD . /app
 WORKDIR /app
 CMD python -m SimpleHTTPServer 5000
