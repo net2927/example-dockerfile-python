@@ -1,4 +1,4 @@
-FROM gliderlabs/alpine:3.4
+FROM alpine:3.23
 
 RUN apk-install python
 ADD . /app
